@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Utilisez notre generateur de code barre en ligne pour créer et télécharger des codes barres (EAN, QR, etc.). CodeBarreGenerator.com : simple, rapide et gratuit.",
   keywords:
-    "generateur code barre​, generateur de code barre​, code barre generator​, générateur code barre​"
+    "generateur code barre​, generateur de code barre​, code barre generator​, générateur code barre​",
   
   // Hreflang 标签会由 Next.js 根据此配置和 metadataBase 自动生成
   alternates: {
