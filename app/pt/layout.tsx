@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "Gerador de Código de Barras Gratuito Online",
   description:
     "Crie diversos tipos de código de barras gratuitamente com nosso gerador online. Ferramenta fácil para gerar seu código de barras rapidamente em CodeBarreGenerator.com.",
+  keywords:
+    "gerador de codigo de barras gratuito​, gerador codigo de barras​, gerador de codigo de barras​, gerador código de barras,código de barras gerador​",
   
   // alternates.languages: 将从根布局 app/layout.tsx 继承。
   // applicationName: 将从根布局 app/layout.tsx 继承。
