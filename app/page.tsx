@@ -7,26 +7,26 @@ import { translations } from "@/lib/translations"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import HeroSection from "@/components/hero-section"
-import SEOHead from "@/components/seo-head-optimized"
+import SEO from "@/components/seo"
 import { WebApplicationSchema, FAQSchema, HowToSchema } from "@/components/structured-data"
 
 export default function Home() {
   const locale = "fr"
   const t = translations[locale]
 
-  // 为FAQ结构化数据准备数据
+  // For FAQ structured data
   const faqItems = t.faq.questions.map((item) => ({
     question: item.question,
     answer: item.answer,
   }))
 
-  // 为HowTo结构化数据准备数据
+  // For HowTo structured data
   const howToSteps = t.howToUse.steps.map((step) => ({
     name: step.title,
     text: step.description,
   }))
 
-  // 法语关键词
+  // French keywords
   const frKeywords = [
     "générateur code barre",
     "code barre generator",
@@ -41,12 +41,15 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <SEOHead
+      <SEO
         title="Générateur Code Barre Gratuit en Ligne | Code Barre Generator"
         description="Utilisez notre générateur code barre en ligne gratuit pour créer des codes-barres professionnels. Code barre generator simple et rapide pour tous formats: EAN, UPC, QR et plus."
         canonicalPath="/"
         locale={locale}
-        keywords={frKeywords}
+        alternateLanguages={{
+          fr: "/",
+          pt: "/pt",
+        }}
       />
 
       <WebApplicationSchema

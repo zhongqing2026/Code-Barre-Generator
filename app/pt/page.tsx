@@ -7,26 +7,26 @@ import { translations } from "@/lib/translations"
 import HeroSection from "@/components/hero-section"
 import Header from "@/components/header-pt"
 import Footer from "@/components/footer-pt"
-import SEOHead from "@/components/seo-head-optimized"
+import SEO from "@/components/seo"
 import { WebApplicationSchema, FAQSchema, HowToSchema } from "@/components/structured-data"
 
 export default function Home() {
   const locale = "pt"
   const t = translations[locale]
 
-  // 为FAQ结构化数据准备数据
+  // For FAQ structured data
   const faqItems = t.faq.questions.map((item) => ({
     question: item.question,
     answer: item.answer,
   }))
 
-  // 为HowTo结构化数据准备数据
+  // For HowTo structured data
   const howToSteps = t.howToUse.steps.map((step) => ({
     name: step.title,
     text: step.description,
   }))
 
-  // 葡萄牙语关键词
+  // Portuguese keywords
   const ptKeywords = [
     "gerador codigo de barras",
     "código de barras gerador",
@@ -41,12 +41,15 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <SEOHead
+      <SEO
         title="Gerador Codigo de Barras Gratuito Online | Código de Barras Gerador"
         description="Use nosso gerador codigo de barras online gratuito para criar códigos de barras profissionais. Código de barras gerador simples e rápido para todos os formatos: EAN, UPC, QR e mais."
         canonicalPath="/pt"
         locale={locale}
-        keywords={ptKeywords}
+        alternateLanguages={{
+          fr: "/",
+          pt: "/pt",
+        }}
       />
 
       <WebApplicationSchema
