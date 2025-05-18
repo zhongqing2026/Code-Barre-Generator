@@ -17,59 +17,40 @@ export const metadata: Metadata = {
   title: "Code Barre Generator Gratuit et Efficace | Créez Vos Codes en Ligne",
   description:
     "Utilisez notre generateur de code barre en ligne pour créer et télécharger des codes barres (EAN, QR, etc.). CodeBarreGenerator.com : simple, rapide et gratuit.",
-  keywords:
+  keywords: // 你添加了 keywords，很好！
     "generateur code barre​, generateur de code barre​, code barre generator​, générateur code barre​",
   
-  // Hreflang 标签会由 Next.js 根据此配置和 metadataBase 自动生成
   alternates: {
     languages: {
-      fr: "/",       // 会解析为 https://codebarregenerator.com/
-      pt: "/pt",     // 会解析为 https://codebarregenerator.com/pt/
-      "x-default": "/", // 会解析为 https://codebarregenerator.com/
+      fr: "/",
+      pt: "/pt",
+      "x-default": "/",
     },
-    // Next.js 会自动为每个页面生成指向其自身的规范URL (结合 metadataBase)
-    // 只有当页面的规范URL不是其自身时，才需要在该页面的 page.tsx 中覆盖它
   },
 
   applicationName: "Code Barre Generator",
-  generator: 'v0.dev', // v0.dev 工具添加的
+  generator: 'v0.dev',
 
-  // Google Search Console 验证标记
   verification: {
     google: 'akTpdmoOUkf5GnNiT-wHt_W5h91HQPPD3KwWLelpEkQ',
-    // yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
-    // bing: 'YOUR_BING_VERIFICATION_CODE',
   },
 
-  // PWA 和移动设备相关的元数据
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default", // 或 'black' 或 'black-translucent'
-    title: "Code Barre Generator", // PWA 在主屏幕上的标题
+    statusBarStyle: "default",
+    title: "Code Barre Generator",
   },
   formatDetection: {
     telephone: false,
   },
-  // 如果你有 manifest.json 文件，可以这样链接：
   // manifest: '/manifest.json',
-
-  // 其他有用的元数据（根据需要添加）
-  // keywords: ['code barre', 'generateur', 'ean', 'qr code', 'gratuit'],
-  // icons: { // 示例：添加网站图标
-  //   icon: '/icon.png', // public/icon.png
-  //   apple: '/apple-icon.png', // public/apple-icon.png
-  // },
 };
 
-// Viewport 配置
 export const viewport: Viewport = {
-  themeColor: [ // 可以为不同色彩模式设置主题颜色
+  themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#4169e1' },
-    { media: '(prefers-color-scheme: dark)', color: '#223a7a' }, // 示例深色模式颜色，请替换为你的实际颜色
+    { media: '(prefers-color-scheme: dark)', color: '#223a7a' },
   ],
-  // width: 'device-width', // Next.js 通常会自动处理
-  // initialScale: 1, // Next.js 通常会自动处理
-  // msapplicationTileColor: '#4169e1', // 如果需要显式设置 Windows 磁贴颜色
 };
 
 export default function RootLayout({
@@ -78,20 +59,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 设置文档的默认语言，与 x-default 和 fr hreflang 对应
     <html lang="fr" suppressHydrationWarning>
-      <head>
-        {/* 
-          Next.js 的 metadata 和 viewport API 会自动管理大部分 <meta> 和 <link> 标签。
-          手动添加的 hreflang 已被移除，因为 metadata.alternates.languages 会处理。
-          Google Search Console 验证也会由 metadata.verification.google 生成。
-          大部分 PWA/mobile 标签已移至 metadata 对象。
+      {/* 
+        ！！！关键修改！！！
+        这里不再有手动的 <head> 标签。
+        Next.js 会根据上面导出的 `metadata` 和 `viewport` 对象，
+        自动在这里生成完整的 <head> 标签及其内容。
+      */}
 
-          下面的 `mobile-web-app-capable` 是一个示例，如果 Next.js metadata API 没有直接覆盖，
-          且你确实需要它，可以保留。但优先使用 Next.js API。
-        */}
-        <meta name="mobile-web-app-capable" content="yes" />
-      </head>
+      {/*
+        如果那个 <meta name="mobile-web-app-capable" content="yes" /> 对你来说非常重要，
+        并且你发现 Next.js 的 appleWebApp 配置没有自动生成类似功能 (通常 appleWebApp.capable: true 应该能处理)，
+        你可以尝试将它保留在 <html> 标签之后，<body> 标签之前，
+        例如：
+        <html lang="fr" suppressHydrationWarning>
+          <meta name="mobile-web-app-capable" content="yes" /> // <--- 像这样
+          <body className={inter.className}>
+            // ...
+          </body>
+        </html>
+        但通常情况下，最好是让 Next.js 的 metadata API 来管理所有头部标签。
+        如果 appleWebApp.capable: true 就能达到目的，就不需要手动添加这个 meta 标签。
+        为了最纯粹地让 Next.js 工作，我暂时在下面完全移除了它。
+        你可以先测试没有它的情况，如果确实需要，再考虑如何添加。
+      */}
+
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <LanguageBanner />
