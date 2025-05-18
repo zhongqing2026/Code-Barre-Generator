@@ -20,8 +20,15 @@ export const metadata: Metadata = {
     },
   },
   applicationName: "Code Barre Generator",
-  // themeColor 属性已移至下面的 viewport 对象
   generator: 'v0.dev', // 这是 v0.dev 工具添加的，可以按需保留或移除
+
+  // 新增 Google Search Console 验证标记
+  verification: {
+    google: 'akTpdmoOUkf5GnNiT-wHt_W5h91HQPPD3KwWLelpEkQ', // <--- 重要：将这里替换成你自己的验证码
+    // 如果有其他搜索引擎的验证码，也可以按类似格式添加
+    // yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
+    // bing: 'YOUR_BING_VERIFICATION_CODE',
+  },
 };
 
 // 定义 viewport 对象，用于控制视口和主题颜色等
@@ -43,8 +50,8 @@ export default function RootLayout({
         {/* 
           Next.js 的 `metadata` 和 `viewport` API 可以管理许多常见的 <meta> 标签。
           例如 `apple-mobile-web-app-*`, `msapplication-TileColor` 等。
-          可以查阅 Next.js 文档，考虑是否将以下部分标签通过 API 配置以简化 <head>。
           `hreflang` 标签通过 `metadata.alternates.languages` 配置是推荐的做法，你已经这样做了。
+          Google Search Console 的验证标签也会由上面的 `metadata.verification.google` 自动生成。
         */}
         <link rel="alternate" hrefLang="fr" href="https://www.codebarregenerator.com/" />
         <link rel="alternate" hrefLang="pt" href="https://www.codebarregenerator.com/pt/" />
