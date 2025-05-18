@@ -16,7 +16,7 @@ export const metadata = {
     },
   },
   applicationName: "Code Barre Generator",
-  themeColor: "#4169e1",
+  themeColor: "#000000",
 }
 
 export default function PtLayout({

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { translations } from "@/lib/translations"
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
@@ -12,7 +13,7 @@ export default function Header() {
     <header className="border-b bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <img src="/favicon-32x32.png" alt="Code Barre Generator Logo" className="h-8 w-8 mr-2" />
+          <Image src="/icon.png" alt="Code Barre Generator Logo" width={32} height={32} className="mr-2" priority />
           <span className="text-xl font-bold text-black font-heading">CodeBarreGenerator.com</span>
         </Link>
 
@@ -48,7 +49,11 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent>
-              <div className="flex flex-col gap-4 mt-8">
+              <div className="flex items-center mb-6">
+                <Image src="/icon.png" alt="Code Barre Generator Logo" width={24} height={24} className="mr-2" />
+                <span className="text-lg font-bold">CodeBarreGenerator</span>
+              </div>
+              <div className="flex flex-col gap-4">
                 <Link
                   href="/generateur-code-barre"
                   className="text-base font-medium py-2 hover:text-black transition-colors"

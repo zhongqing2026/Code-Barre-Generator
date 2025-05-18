@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { translations } from "@/lib/translations"
 
 export default function Footer() {
@@ -11,7 +12,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link href="/" className="flex items-center mb-4">
-              <img src="/android-chrome-192x192.png" alt="Code Barre Generator Logo" className="h-10 w-10 mr-2" />
+              <Image
+                src="/icon.png"
+                alt="Code Barre Generator Logo"
+                width={40}
+                height={40}
+                className="mr-2 invert" // 在黑色背景上反转颜色
+              />
               <h3 className="text-xl font-bold font-heading">CodeBarreGenerator.com</h3>
             </Link>
             <p className="text-gray-300 mb-4 leading-relaxed">

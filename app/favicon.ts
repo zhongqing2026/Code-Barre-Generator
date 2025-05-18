@@ -25,8 +25,18 @@ export default function favicon(): MetadataRoute.Favicon {
       type: "image/png",
     },
     {
+      rel: "icon",
+      url: "/icon.png",
+      type: "image/svg+xml",
+    },
+    {
       rel: "manifest",
       url: "/site.webmanifest",
+    },
+    {
+      rel: "mask-icon",
+      url: "/safari-pinned-tab.png",
+      color: "#000000",
     },
   ]
 }
