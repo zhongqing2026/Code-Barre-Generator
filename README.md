@@ -14,14 +14,13 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/zhongqing2026s-projects/v0-chinese-website-development](https://vercel.com/zhongqing2026s-projects/v0-chinese-website-development)**
+**[[https://vercel.com/zhongqing2026s-projects/v0-chinese-website-development](https://vercel.com/zhongqing2026s-projects/v0-chinese-website-development)](https://codebarregenerator.com/)**
 
 ## Build your app
 
 Continue building your app on:
 
-**[https://v0.dev/chat/projects/L3wfFCEqhJz](https://v0.dev/chat/projects/L3wfFCEqhJz)**
-
+https://codebarregenerator.com/
 ## How It Works
 
 1. Create and modify your project using [v0.dev](https://v0.dev)
