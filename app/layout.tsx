@@ -6,6 +6,12 @@ import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
+// 定义 viewport 对象
+export const viewport = {
+  themeColor: "#4169e1", // themeColor 已移到这里
+}
+
+// metadata 对象，移除了 themeColor
 export const metadata = {
   title: "Code Barre Generator Gratuit et Efficace | Créez Vos Codes en Ligne",
   description:
@@ -19,7 +25,7 @@ export const metadata = {
     },
   },
   applicationName: "Code Barre Generator",
-  themeColor: "#4169e1",
+  // themeColor: "#4169e1", // 已从此对象中移除
   appleWebApp: {
     title: "Code Barre Generator",
     statusBarStyle: "default",
@@ -34,7 +40,7 @@ export const metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -45,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
+        {/* Next.js 会根据 viewport.themeColor 自动生成 <meta name="theme-color"> */}
         <link rel="canonical" href="https://codebarregenerator.com" />
         <link rel="alternate" hrefLang="fr" href="https://codebarregenerator.com" />
         <link rel="alternate" hrefLang="pt" href="https://codebarregenerator.com/pt" />
@@ -55,7 +62,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Code Barre Generator" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#4169e1" />
+        <meta name="msapplication-TileColor" content="#4169e1" /> {/* 这个可以保留，服务于 Windows 磁贴 */}
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
