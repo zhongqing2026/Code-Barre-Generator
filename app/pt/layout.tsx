@@ -12,7 +12,7 @@ export const viewport = {
 export const metadata = {
   title: "Gerador de Código de Barras Gratuito Online",
   description:
-    "Crie diversos tipos de código de barras gratuitamente com nosso gerador online. Ferramenta fácil para gerar seu código de barras rapidamente em CodeBarreGenerator.com.",
+    "Gerador de código de barras online grátis: crie EAN, QR e mais tipos facilmente! Ferramenta rápida para gerar seus códigos. Visite CodeBarreGenerator.com.",
   keywords:
     "gerador codigo de barras, gerador de codigo de barras, gerador código de barras, código de barras gerador, gerador de codigo de barras gratuito",
   alternates: {
