@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.codebarregenerator.com/sitemap.xml",
-    host: "https://www.codebarregenerator.com",
+    sitemap: "https://codebarregenerator.com/sitemap.xml",
+    host: "https://codebarregenerator.com",
   }
 }
