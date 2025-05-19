@@ -19,28 +19,20 @@ export const metadata = {
     },
   },
   applicationName: "Code Barre Generator",
-  themeColor: "#000000",
+  themeColor: "#4169e1",
   appleWebApp: {
     title: "Code Barre Generator",
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     capable: true,
   },
   manifest: "/site.webmanifest",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/svg+xml" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.png",
-        color: "#000000",
-      },
-    ],
   },
     generator: 'v0.dev'
 }
@@ -59,12 +51,11 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://codebarregenerator.com" />
         <meta name="application-name" content="Code Barre Generator" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Code Barre Generator" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content="#4169e1" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>

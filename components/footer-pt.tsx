@@ -13,11 +13,11 @@ export default function Footer() {
           <div>
             <Link href="/pt" className="flex items-center mb-4">
               <Image
-                src="/icon.png"
+                src="/android-chrome-192x192.png"
                 alt="Code Barre Generator Logo"
                 width={40}
                 height={40}
-                className="mr-2 invert" // 在黑色背景上反转颜色
+                className="mr-2 bg-white rounded-md p-1"
               />
               <h3 className="text-xl font-bold font-heading">CodeBarreGenerator.com</h3>
             </Link>

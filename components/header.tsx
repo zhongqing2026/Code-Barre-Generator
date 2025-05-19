@@ -13,7 +13,14 @@ export default function Header() {
     <header className="border-b bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <Image src="/icon.png" alt="Code Barre Generator Logo" width={32} height={32} className="mr-2" priority />
+          <Image
+            src="/android-chrome-192x192.png"
+            alt="Code Barre Generator Logo"
+            width={32}
+            height={32}
+            className="mr-2"
+            priority
+          />
           <span className="text-xl font-bold text-black font-heading">CodeBarreGenerator.com</span>
         </Link>
 
@@ -50,7 +57,13 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent>
               <div className="flex items-center mb-6">
-                <Image src="/icon.png" alt="Code Barre Generator Logo" width={24} height={24} className="mr-2" />
+                <Image
+                  src="/android-chrome-192x192.png"
+                  alt="Code Barre Generator Logo"
+                  width={24}
+                  height={24}
+                  className="mr-2"
+                />
                 <span className="text-lg font-bold">CodeBarreGenerator</span>
               </div>
               <div className="flex flex-col gap-4">
