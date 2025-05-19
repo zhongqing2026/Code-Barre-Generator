@@ -16,6 +16,8 @@ export const metadata = {
   title: "Code Barre Generator Gratuit et Efficace | Créez Vos Codes en Ligne",
   description:
     "Utilisez notre generateur de code barre en ligne pour créer et télécharger des codes barres (EAN, QR, etc.). CodeBarreGenerator.com : simple, rapide et gratuit.",
+  keywords:
+    "generateur code barre​, generateur de code barre​, code barre generator​, générateur code barre​",
   alternates: {
     canonical: "https://codebarregenerator.com",
     languages: {
