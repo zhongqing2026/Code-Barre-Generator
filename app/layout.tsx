@@ -13,7 +13,7 @@ export const viewport = {
 
 // metadata 对象，移除了 themeColor
 export const metadata = {
-  title: "Code Barre Generator Gratuit et Efficace | Créez Vos Codes en Ligne",
+  title: "Code Barre Generator: Gratuit, Efficace | Créez en Ligne",
   description:
     "Utilisez notre generateur de code barre en ligne pour créer et télécharger des codes barres (EAN, QR, etc.). CodeBarreGenerator.com : simple, rapide et gratuit.",
   keywords:
